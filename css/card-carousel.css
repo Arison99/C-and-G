@@ -1,0 +1,192 @@
+/*
+Theme Name: C&G
+Theme URI: 
+Author: ARISON99
+Author URI: htps://github.com/Arison99
+Description: Custom theme replica for C&G
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: cg-textdomain
+*/
+
+/* Import Bree Serif Font */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+/************************************************************
+  General Styles
+************************************************************/
+
+/************************************************************
+  Carousel Styles
+************************************************************/
+
+/* Full-width carousel styling */
+.carousel-wrapper {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 1; /* Ensure proper stacking context */
+}
+
+/* Ensure carousel takes full width */
+#servicesCarousel {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply Bree Serif font to text elements */
+#servicesCarousel .display-4,
+#servicesCarousel h1,
+#servicesCarousel h2,
+#servicesCarousel h3,
+#servicesCarousel .lead {
+  font-family: 'Bree Serif', serif;
+}
+
+/* Apply Bree Serif font to text elements */
+#servicesCarousel p,
+#servicesCarousel .lead {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Ensure all carousel items have consistent height */
+#servicesCarousel .carousel-item .container-fluid {
+  min-height: 600px;
+  position: relative;
+  overflow: visible;
+  padding-bottom: 70px; /* Space for the curve */
+  margin-bottom: -50px; /* Compensate for the curve overflow */
+  padding-left: 0;
+  padding-right: 0;
+  border: none !important; /* Remove border since it's specified inline in HTML */
+}
+
+/* Create the elliptic curve effect at the bottom */
+#servicesCarousel .carousel-item .container-fluid::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  border-radius: 80% 80% 0 0 / 80% 80% 0 0;
+  z-index: 1;
+  display: block;
+}
+
+/* Center content better in full-width layout */
+#servicesCarousel .row {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Image styling to match the design in index.php */
+#servicesCarousel .img-cd.rounded-circle {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-left: 15px solid rgb(255, 209, 3);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  margin: 0 auto;
+  display: block;
+}
+
+/* Ensure text columns have proper spacing */
+#servicesCarousel .col-md-6.text-white {
+  padding: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  #servicesCarousel .img-cd.rounded-circle {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 992px) {
+  #servicesCarousel .carousel-item .container-fluid {
+    min-height: 550px;
+  }
+  
+  #servicesCarousel .img-cd.rounded-circle {
+    width: 300px;
+    height: 300px;
+  }
+  
+  #servicesCarousel .display-4 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #servicesCarousel .carousel-item .container-fluid {
+    min-height: 700px; /* Increased for stacked layout */
+    padding-bottom: 50px;
+  }
+  
+  #servicesCarousel .display-4 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  #servicesCarousel .lead {
+    font-size: 1rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #servicesCarousel .img-cd.rounded-circle {
+    width: 250px;
+    height: 250px;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #servicesCarousel .carousel-item .container-fluid {
+    min-height: 600px;
+    padding-bottom: 40px;
+  }
+  
+  #servicesCarousel .container-fluid::after {
+    bottom: -10px;
+    height: 40px;
+  }
+
+  #servicesCarousel .display-4 {
+    font-size: 1.5rem;
+  }
+  
+  #servicesCarousel .lead {
+    font-size: 0.9rem;
+    max-width: 100% !important;
+  }
+  
+  #servicesCarousel .py-5 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  
+  #servicesCarousel .img-cd.rounded-circle {
+    width: 200px;
+    height: 200px;
+  }
+  
+  #servicesCarousel .col-md-6.text-white {
+    padding: 1rem;
+  }
+}
+
+/* Control carousel autoplay speed */
+.carousel {
+  transition: transform 0.6s ease;
+}
