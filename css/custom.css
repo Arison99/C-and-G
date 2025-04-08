@@ -1,0 +1,116 @@
+/*
+Theme Name: C&G
+Theme URI: 
+Author: ARISON99
+Author URI: htps://github.com/Arison99
+Description: Custom theme replica for C&G
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: cg-textdomain
+*/
+
+/* Navbar Background */
+.custom-navbar-bg {
+  background-color: #5c1a4b; /* Purple color */
+}
+
+/* Brand Text */
+.brand-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase; /* Optional */
+  letter-spacing: 0.5px; /* Optional */
+  font-family: 'Bree Serif', serif;
+}
+
+/* Navbar Links */
+.nav-link {
+  color: #ffffff !important;
+  font-weight: 600;
+  margin-right: 1rem;
+  font-family: 'Bree Serif', serif;
+  font-size:large;
+  word-spacing: normal;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  text-decoration: none;
+  background-color: #531d45;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-item {
+  color: #333333 !important;
+  font-family: 'Bree Serif', serif;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.dropdown-item:hover {
+  background-color: #5c1a4b;
+  color: #ffffff !important;
+}
+
+/* Social Icons */
+.social-icon {
+  color: #ffffff !important;
+  margin-right: 0.5rem;
+  border-spacing: 1.2rem;
+}
+
+.social-icon:hover {
+  color: #5c1a4b !important;
+  background-color: #ffffff;
+}
+
+
+/* Fixed Navbar Styles */
+.navbar {
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-spacer {
+  height: 70px; /* Adjust based on your navbar height */
+}
+
+/* Navbar when expanded (at top) */
+.navbar-expanded {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navbar-expanded #navbar-logo {
+  margin-top: 10px;
+  height: 70px; /* Larger logo when at top */
+  width: 70px; ;
+  transition: height 0.3s ease;
+}
+
+/* Navbar when scrolled */
+.navbar-scrolled {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-scrolled #navbar-logo {
+  height: 40px; /* Smaller logo when scrolled */
+  transition: height 0.3s ease;
+}
+
+/* Make sure the navbar stays above other content */
+.fixed-top {
+  z-index: 1030;
+}

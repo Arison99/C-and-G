@@ -1,0 +1,166 @@
+/*
+Theme Name: C&G
+Theme URI: 
+Author: ARISON99
+Author URI: htps://github.com/Arison99
+Description: Custom theme replica for C&G
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: cg-textdomain
+*/
+
+body {
+    background-color: white;
+}
+
+.appointment-container {
+    background-color: white;
+    margin: 50px 0;
+
+}
+
+.info-section {
+    background-color: white;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.info-content {
+    max-width: 90%;
+}
+
+.heading {
+    color: #000000;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-family: 'Bree Serif', serif;
+}
+
+.description {
+    color: #000000;
+    font-size: medium;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-section {
+    background-color: #5c1a4b;
+    padding: 60px 40px;
+    
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: none;
+    color: black;
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-label {
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.btn {
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color:#5c1a4b ;
+}
+
+.btn-light:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-check-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.privacy-link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.privacy-link:hover {
+    color: white;
+}
+
+/* Make the form responsive on smaller screens */
+@media (max-width: 767px) {
+    .info-section, .form-section {
+        padding: 40px 25px;
+    }
+    
+    .heading {
+        font-size: 2.2rem;
+    }
+    
+    .appointment-container {
+        margin: 20px 0;
+    }
+}
+
+/* Additional responsive styles */
+@media (max-width: 1024px) {
+    .info-section, .form-section {
+        padding: 50px 30px;
+    }
+
+    .heading {
+        font-size: 2.5rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .info-section, .form-section {
+        padding: 30px 20px;
+    }
+
+    .heading {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .form-control, .form-select {
+        padding: 10px 12px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}

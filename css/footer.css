@@ -1,0 +1,99 @@
+/*
+Theme Name: C&G
+Theme URI: 
+Author: ARISON99
+Author URI: htps://github.com/Arison99
+Description: Custom theme replica for C&G
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: cg-textdomain
+*/
+
+
+.footer-container {
+    background-color: #5c1a4b;
+    color: white;
+    width: 100%;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.footer-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: rgb(247, 247, 247);
+    font-family: 'Bree Serif', serif;
+    font-size: large;
+}
+
+.footer-logo {
+    max-width: 150px;
+    border-radius: 50%;
+}
+
+.logo-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: #5c1a4b;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-list li, 
+.services-list li, 
+.hours-list li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+}
+
+.contact-list i, 
+.services-list i, 
+.hours-list i {
+    margin-right: 10px;
+    font-size: 1rem;
+    margin-top: 4px;
+}
+
+.contact-list span {
+    flex: 1;
+}
+
+.copyright-bar {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .footer-heading {
+        margin-top: 20px;
+    }
+    
+    .logo-container {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-container {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .logo-container::before,
+    .logo-container::after {
+        font-size: 0.55rem;
+    }
+}
