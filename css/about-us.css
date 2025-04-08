@@ -1,0 +1,115 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: transparent;
+    padding: 40px 0;
+    color: #222;
+}
+
+/* Container styling */
+.about-us-container {
+    max-width: 1200px;
+    max-height: 100vh;
+    margin: 40px auto; /* Reduced from 80px to 40px */
+    background-color: transparent; /* Make container transparent */
+    box-shadow: 0 8px 20px transparent; /* More subtle, colored shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effects */
+}
+
+/* Add hover effect to enhance floating appearance */
+.about-us-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px transparent;
+}
+
+/* Image container styling */
+.about-image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-left: 10px solid #ffd700; /* Yellow border as seen in the image */
+    border-top: 10px solid #ffd700;
+    overflow: hidden;
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Text container styling */
+.about-text-container {
+    margin-top: 60px;
+    padding: 30px 30px; /* Reduced top/bottom padding from 40px to 30px */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #222;
+}
+
+.section-label {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-family: 'Bree Serif', serif;
+}
+
+.section-titlez {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 20px;
+    font-family: 'Bree Serif', serif;
+}
+
+.section-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+    font-family:'Roboto', sans-serif;
+    font-size:medium;
+    font-weight: 200;
+}
+
+.read-more-btn {
+    display: inline-block;
+    background-color: #5a1046; /* Purple color as shown in the image */
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.read-more-btn:hover {
+    background-color: #4a0d38;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .about-image-container {
+        height: 350px;
+    }
+    
+    .about-text-container {
+        padding: 30px 20px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
