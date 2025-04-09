@@ -14,7 +14,7 @@
       <!-- Logo / Brand Name -->
       <a class="navbar-brand d-flex align-items-center" href="<?php echo home_url(); ?>">
         
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo-guardandcare-2.png" alt="Logo" class="me-2" id="navbar-logo"> 
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo-guardandcare-2.png" alt="Logo" class="me-2" id="navbar-logo"> 
       </a>
 
       <!-- Mobile Menu Toggle -->

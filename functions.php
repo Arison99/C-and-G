@@ -6,13 +6,22 @@
  */
 
 function my_theme_enqueue_scripts() {
-    // Enqueue Bootstrap CSS from local folder
-    wp_enqueue_style(
-        'bootstrap-css', 
-        get_stylesheet_directory_uri() . '/css/bootstrap.min.css', 
-        array(), 
-        '5.3.0'
-    );
+    // Enqueue Bootstrap CSS with fallback to CDN
+    if (file_exists(get_stylesheet_directory() . '/assets/css/bootstrap.min.css')) {
+        wp_enqueue_style(
+            'bootstrap-css', 
+            get_stylesheet_directory_uri() . '/assets/css/bootstrap.min.css', 
+            array(), 
+            '5.3.0'
+        );
+    } else {
+        wp_enqueue_style(
+            'bootstrap-css', 
+            'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css', 
+            array(), 
+            '5.3.0'
+        );
+    }
     
     // Add Font Awesome
     wp_enqueue_style(
@@ -38,29 +47,39 @@ function my_theme_enqueue_scripts() {
         '1.0'
     );
     
-    // Enqueue Bootstrap JS from local folder (includes Popper.js)
-    wp_enqueue_script(
-        'bootstrap-js', 
-        get_stylesheet_directory_uri() . '/js/bootstrap.bundle.min.js', 
-        array('jquery'), // Ensure jQuery is a dependency
-        '5.3.0', 
-        true
-    );
+    // Enqueue Bootstrap JS with fallback to CDN
+    if (file_exists(get_stylesheet_directory() . '/assets/js/bootstrap.bundle.min.js')) {
+        wp_enqueue_script(
+            'bootstrap-js', 
+            get_stylesheet_directory_uri() . '/assets/js/bootstrap.bundle.min.js', 
+            array('jquery'), // Ensure jQuery is a dependency
+            '5.3.0', 
+            true
+        );
+    } else {
+        wp_enqueue_script(
+            'bootstrap-js', 
+            'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js', 
+            array('jquery'), 
+            '5.3.0', 
+            true
+        );
+    }
     
     // Add custom theme styles
-    wp_enqueue_style( 'custom-navbar-style', get_template_directory_uri() . '/css/custom.css', array('bootstrap-css'), '1.0', 'all' );
+    wp_enqueue_style( 'custom-navbar-style', get_template_directory_uri() . '/assets/css/custom.css', array('bootstrap-css'), '1.0', 'all' );
 
-    wp_enqueue_style( 'carousel-wrapper', get_template_directory_uri() . '/css/card-carousel.css', array('bootstrap-css'), '1.0', 'all' );
+    wp_enqueue_style( 'carousel-wrapper', get_template_directory_uri() . '/assets/css/card-carousel.css', array('bootstrap-css'), '1.0', 'all' );
 
-    wp_enqueue_style( 'container', get_template_directory_uri() . '/css/about-us.css', array('bootstrap-css'), '1.0', 'all' );
+    wp_enqueue_style( 'container', get_template_directory_uri() . '/assets/css/about-us.css', array('bootstrap-css'), '1.0', 'all' );
 
-    wp_enqueue_style( 'services-container', get_template_directory_uri() . '/css/service-carousel.css', array('bootstrap-css'), '1.0', 'all' );
+    wp_enqueue_style( 'services-container', get_template_directory_uri() . '/assets/css/service-carousel.css', array('bootstrap-css'), '1.0', 'all' );
 
-    wp_enqueue_style( 'why-choose-us-section', get_template_directory_uri() . '/css/choose-us.css', array('bootstrap-css'), '1.0', 'all' );
+    wp_enqueue_style( 'why-choose-us-section', get_template_directory_uri() . '/assets/css/choose-us.css', array('bootstrap-css'), '1.0', 'all' );
 
-    wp_enqueue_style( 'form-container', get_template_directory_uri() . '/css/form.css', array('bootstrap-css'), '1.0', 'all' );
+    wp_enqueue_style( 'form-container', get_template_directory_uri() . '/assets/css/form.css', array('bootstrap-css'), '1.0', 'all' );
 
-    wp_enqueue_style( 'footer-container', get_template_directory_uri() . '/css/footer.css', array('bootstrap-css'), '1.0', 'all' );
+    wp_enqueue_style( 'footer-container', get_template_directory_uri() . '/assets/css/footer.css', array('bootstrap-css'), '1.0', 'all' );
 }
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');
 

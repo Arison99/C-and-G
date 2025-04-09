@@ -12,7 +12,7 @@
                     <!-- Logo Column -->
                     <div class="col-lg-3 mb-4 mb-lg-0 text-center">
                         <div class="logo-container">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/logo-guardandcare-2.png" alt="Guard & Care LLC Logo" class="footer-logo">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-guardandcare-2.png" alt="Guard & Care LLC Logo" class="footer-logo">
                         </div>
                     </div>
                     
@@ -90,4 +90,7 @@
             <!-- Copyright Bar -->
           <div class="copyright-bar">
                 <div class="container text-center">
-                    <p class="mb-0">©202
+                    <p class="mb-0">©2025 <a href="https://github.com/Arison99"> Arison99 </a>
+                    </p>
+                </div>
+          </div>
